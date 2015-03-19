@@ -54,7 +54,7 @@
 						if(jQuery.isArray(target[name])){
 							jQuery.merge(target[name],copy);
 						}else{
-							target[name]=copy;
+							target[name]= Array.prototype.slice.call(copy);
 						}
 					}else
 					// Never move original objects, clone them
